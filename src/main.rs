@@ -40,7 +40,7 @@ fn byte(sink: &Sink, byte: u8) {
     // start with a zero bit
     bit_0(sink);
     // iterate the bits of byte
-    for i in (0..8).rev() {
+    for i in 0..=7 {
         if (byte & (1 << i)) != 0 {
             bit_1(sink);
         } else {
